@@ -13,15 +13,12 @@ function moveItemsOnClick(type) {
     let listItems = document.querySelectorAll('.list .list-item')
     let thumbItems = document.querySelectorAll('.thumb .thumb-item')
 
-    console.log(listItems)
-    console.log(thumbItems)
 
     if (type === 'next') {
         list.appendChild(listItems[0])
-        thumb.appendChild(thumbItems[0])
-       
+        thumb.appendChild(thumbItems[0]) 
     } else {
-         list.insertBefore(listItems[listItems.length - 1], listItems[0])
-        thumb.insertBefore(thumbItems[thumbItems.length - 1], thumbItems[0])
+        list.prepend(listItems[listItems.length - 1], )
+        thumb.prepend(thumbItems[thumbItems.length - 1])
     }
 }
